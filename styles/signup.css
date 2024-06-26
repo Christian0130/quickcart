@@ -1,0 +1,148 @@
+.login-body{
+    background-image: linear-gradient(to right, #F8E0C2, #f7b462);
+    height: 600px;
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    padding: 50px 200px;
+    justify-content: space-between;
+
+}
+
+.body-login{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 45%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 40px;
+}
+
+.body-login p:nth-child(1){
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.body-login input{
+    width: 100%;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 28px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    background: rgb(251, 251, 251);
+    margin-bottom: 20px;
+}
+
+.body-login button{
+    margin-bottom: 5px;
+    outline: 0;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    background: #000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    padding: 12px 20px;
+    text-align:center;
+    margin-bottom: 50px;
+}
+
+.body-login button a{
+    color: white;
+}
+
+.body-login button:hover{
+    opacity: 0.8;
+}
+
+.body-login p a{
+    color: blue ;
+}
+
+.body-login p a:hover{
+    opacity: 0.8;
+}
+
+
+
+#login {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+} 
+ 
+#login span { 
+     background:#fff; 
+     padding:0 10px; 
+}
+
+.login-options{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+}
+
+.login-options a{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: 60%;
+    justify-content: center;
+    column-gap: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    border-radius: 4px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.login-options-container div{
+    width: 30px;
+    height: 30px;
+}
+
+.login-options-container p{
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.login-options-container div img{
+    width: 100%;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    position: fixed;
+    background-color: blue;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 95px;
+    background-color: white;
+}
+
+.footer p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p a{
+    color: #d09a58;
+}
+p a:active{
+    opacity: 0.8;
+}
