@@ -99,9 +99,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
     height: 180px;
     margin-bottom: 20px;
+    :hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
   }
   
   .product-image {
@@ -210,3 +213,11 @@
   .search-bar button img{
     width: 60%;
   }
+
+#product:hover{
+  opacity: 0.8;
+}
+
+#product:active{
+  opacity: 0.5;
+}

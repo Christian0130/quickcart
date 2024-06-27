@@ -1,3 +1,25 @@
+export function getProduct(productId){
+    let matchingProduct;
+    products.forEach((product)  => {
+      if(productId === product.id){
+        matchingProduct = product;
+      }
+    });
+    return matchingProduct;
+}
+export function productInformationFunc(productInfo) {
+  productInformation = productInfo;
+  saveToStorage();
+  return productInformation;
+}
+
+export let productInformation = JSON.parse(localStorage.getItem('productInformation'));
+
+function saveToStorage(){
+  localStorage.setItem('productInformation', JSON.stringify(productInformation));
+}
+
+
 export const products = [
     {
       id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",

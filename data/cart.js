@@ -1,60 +1,67 @@
-//use the basket in local storage
-export let basket = JSON.parse(localStorage.getItem('basket'));
+export let cart;
 
-if(!basket){
-    basket = [{
-        productName: "Tomato",
-        lbs: 1
-    },{
-        productName: "Ginger",
-        lbs: 1
-    }]
+loadFromStorage();
+
+export function  loadFromStorage(){
+    cart = JSON.parse(localStorage.getItem('cart'));
+
+if(!cart){
+    cart = [{
+        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+        quantity: 2,
+        deliveryOptionId: '1'
+    }, {
+        productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
+        quantity: 1,
+        deliveryOptionId: '2'
+    }];    
+}
 }
 
 
-//save the basket to the local storage
 function saveToStorage(){
-    localStorage.setItem('basket', JSON.stringify(basket));
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-
-//function that adds a profuct to the basket
-export function addToBasket(productName){
+//function that adds a product to the cart
+export function addToCart(productId){
     let matchingProduct;
-
-    basket.forEach((basketItem) => {
-        if(productName === basketItem.productName){
-            matchingProduct = basketItem;
+    cart.forEach((cartItem) => {
+        if(productId === cartItem.productId){
+            matchingProduct = cartItem;
         }
     });
 
-        if(matchingProduct){
-            matchingProduct.lbs += 1;
-        }else{
-            basket.push({
-                productName: productName,
-                lbs: 1
-            })
-        }
-        saveToStorage();          
-};
+    if(matchingProduct){
+        matchingProduct.quantity += 1
+    }
+    else{
+        cart.push({
+            productId: productId,
+            quantity: 1
+        });
+    }
+
+    saveToStorage();
+}
 
 //function that removes an item from the basket
-export function removeFromBasket(productName){
+export function removeFromCart(productId){
     
-    const newBasket = [];
-    basket.forEach((basketItem) => {
-        if(basketItem.productName != productName){
-            newBasket.push(basketItem);
+    const newCart = []
+
+    cart.forEach((cartItem) => {
+        if(productId !== cartItem.productId){
+            newCart.push(cartItem)
         }
     })
 
-    basket = newBasket;
+    cart = newCart;
     saveToStorage();
 }
 
 export function getQuantity() {
-    let basketQuantity;
-    basketQuantity = basket.length;
-    return basketQuantity;
+    let cartQuantity;
+    cartQuantity = cart.length;
+    return cartQuantity;
 }
